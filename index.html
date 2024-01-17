@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="head-section">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul
+                class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  active" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Inbox</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Teams</a>
+                </li>
+              </ul>
+              <form class="d-flex align-items-center" role="search">
+                <button class="btn border-2px-grey rounded" type="button">
+                  Upgrade
+                </button>
+                <div class="profile-holder border-2px-grey">
+                  <img src="assets/images/profile.png" alt="" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="form-section toggleDisplay">
+        <form action="">
+          <ul>
+            <li>
+              <label for="project-title">Project Name:</label>
+              <input type="text" name="project-title" id="project-title" placeholder="eg:- Project Name" maxlength="50" required>
+            </li>
+            <li>
+              <label for="color">Color: </label>
+              <input type="color" name="color" id="color">
+            </li>
+            <li>
+              <button type="button" onclick="addProject()">Add</button>
+              <button type="button" onclick="toggleForm()">cancel</button>
+            </li>
+          </ul>
+
+
+        </form>
+      </div>
+      <div class="main-section">
+        <div class="sidebar">
+          <div class="top">
+            <p class="head">Projects</p>
+            <div class="sidebar-projects-container">
+              <div class="sidebar-project">
+                <div class="bullet" style="border: 2px solid whitesmoke;"></div>
+                <p class="title">Demo</p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <p class="head">Team</p>
+            <div class="card premium">
+              <p class="premium">Need to form a team?</p>
+              <p class="solution">
+                Try our 30 day trial and see what you can achieve together.
+              </p>
+              <button type="submit">Try it free</button>
+            </div>
+          </div>
+        </div>
+        <div class="mainbar">
+          <p class="title">
+            Projects
+          </p>
+          <div class="card-container">
+            <div class="card">
+              <div class="pic">DL</div>
+              <p class="card-title">Demo Lists</p>
+            </div>
+            <div class="add-card" onclick="toggleForm()">
+              <div class="pic">+</div>
+              <p class="card-title">Add a project</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
